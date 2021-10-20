@@ -22,15 +22,6 @@ function onRequest(client_req, client_res) {
       break;
 //Nhk
     case '/nhk':
-    const exec = require('child_process').exec, child;
-    const myShellScript = exec('sh vpn.sh /myDir');
-    myShellScript.stdout.on('data', (data)=>{
-    console.log(data); 
-    // do whatever you want here with data
-});
-myShellScript.stderr.on('data', (data)=>{
-    console.error(data);
-});
       options = {
         hostname: 'proxy',
         port: 80, // This doesnt seem to work getaddrinfo ENOTFOUND proxy proxy:80
